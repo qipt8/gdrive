@@ -1,5 +1,6 @@
 {
     "name": "marxvn/gdrive",
+    "type": "library",
     "description": "GDrive library.",
     "license": "BSD-3-Clause",
     "authors": [
@@ -10,7 +11,9 @@
     "require": {
         "php": ">=5.3"
     },
-    
+    "suggest": {
+        "tedivm/stash": "For caching source video url"
+    },
     "autoload": {
         "psr-4": {
             "Marxvn\\": "src/"
