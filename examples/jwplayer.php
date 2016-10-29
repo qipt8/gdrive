@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '../vendor/autoload.php';
 use \Marxvn\gdrive;
 
 $gdrive = new gdrive;
@@ -18,12 +18,11 @@ $gdrive->getLink('LINK_GOOGLE_DRIVE');
 <body>
 	<div id='player'></div>
 
-	<script src='//content.jwplatform.com/libraries/PCOqVnbB.js'></script>
 	<script type='text/javascript'>
 		jwplayer.key='your_jwp_key';
 		var playerInstance = jwplayer(player);
 		playerInstance.setup({
-			sources: <?php echo$gdrive->getSources('jwplayer');?>,
+			sources: <?php echo $gdrive->getSources('jwplayer');?>,
 			width: '100%',
 		    height: '100%',
 		    aspectratio: '16:9',
