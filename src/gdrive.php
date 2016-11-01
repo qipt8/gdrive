@@ -112,7 +112,7 @@ class gdrive
 				foreach ($urls as $url) {
 					list($itag,$link) = explode('|', $url);
 					if(in_array($itag, $this->itag)){
-						$source[$this->vidcode[$itag]] = preg_replace(["/[^\/]+\.googlevideo\.com/", "/ipbits=\d{2}/"], ["redirector.googlevideo.com", 'ipbits=0'],$link);
+						$source[$this->vidcode[$itag]] = preg_replace("/[^\/]+\.googlevideo\.com/", "redirector.googlevideo.com",$link);
 					}
 				}
 			}
